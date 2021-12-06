@@ -1,11 +1,11 @@
 import run from 'aocrunner'
 
 function parseInput(rawInput: string) {
-  return rawInput
+  return rawInput.split('\n')
 }
 
 function part1(rawInput: string) {
-  let input = parseInput(rawInput).split('\n')
+  let input = parseInput(rawInput)
 
   let horizontalPosition = 0
   let depth = 0
@@ -26,7 +26,7 @@ function part1(rawInput: string) {
 }
 
 function part2(rawInput: string) {
-  let input = parseInput(rawInput).split('\n')
+  let input = parseInput(rawInput)
 
   let horizontalPosition = 0
   let depth = 0

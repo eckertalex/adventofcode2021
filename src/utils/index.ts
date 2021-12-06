@@ -29,3 +29,28 @@
  *     import { myUtil } from '../utils'
  *
  */
+
+function sum(numbers: number[]) {
+  return numbers.reduce((sum, number) => sum + number, 0)
+}
+
+function createMatrix(size: number) {
+  return [...new Array<number>(size)].map(() => new Array<number>(size).fill(0))
+}
+
+function transpose2DMatrix(matrix: any[][]) {
+  return matrix[0].map((_, i) => matrix.map((x) => x[i]))
+}
+
+function flipBits(bits: string) {
+  return bits
+    .split('')
+    .map((bit) => (bit === '1' ? '0' : '1'))
+    .join('')
+}
+
+function bin(decimal: string) {
+  return parseInt(decimal, 2)
+}
+
+export { sum, createMatrix, transpose2DMatrix, flipBits, bin }

@@ -1,12 +1,11 @@
 import run from 'aocrunner'
 
 function parseInput(rawInput: string) {
-  return rawInput
+  return rawInput.split('\n').map(Number)
 }
 
 function part1(rawInput: string) {
-  let input = parseInput(rawInput)
-  let measurements = input.split('\n').map((str) => Number(str))
+  let measurements = parseInput(rawInput)
 
   let count = 0
   for (let i = 1; i <= measurements.length; i++) {
@@ -19,8 +18,7 @@ function part1(rawInput: string) {
 }
 
 function part2(rawInput: string) {
-  let input = parseInput(rawInput)
-  let measurements = input.split('\n').map((str) => Number(str))
+  let measurements = parseInput(rawInput)
 
   let count = 0
   let prevSum = measurements[2] + measurements[1] + measurements[0]
