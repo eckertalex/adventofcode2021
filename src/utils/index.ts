@@ -87,6 +87,10 @@ function neighbors(y: number, x: number, grid: any[][]) {
   return result
 }
 
+function isLowercase(str: string) {
+  return /[a-z]/.test(str)
+}
+
 export {
   sum,
   prod,
@@ -97,4 +101,5 @@ export {
   flipBits,
   bin,
   neighbors,
+  isLowercase,
 }
